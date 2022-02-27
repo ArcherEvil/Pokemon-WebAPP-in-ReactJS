@@ -1,0 +1,24 @@
+$background-clr : #ffffff;
+$navbar-height : 100px;
+$footer-height : 150px;
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    background-color: $background-clr;
+}
+.App {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: $navbar-height 1fr $footer-height;
+}

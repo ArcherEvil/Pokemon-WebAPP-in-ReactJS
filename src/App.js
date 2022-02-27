@@ -1,25 +1,26 @@
 import axios from 'axios';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import './App.css';
+import Header from './components/header.js';
+
+
 
 function App() {
 
-  const [PokemonList, setPokemonList] = useState([])
-  const url = 'https://pokeapi.co/api/v2/pokemon?limit=100'
-  const list = []
-  
-  axios.get(url).then((response) => {
+  const [PokemonList, setPokemonList] = useState('')
+
+  useEffect(() => {
+    const url = 'https://pokeapi.co/api/v2/pokemon?limit=100';
+    axios.get(url).then((response) => {
     setPokemonList(response.data.results)
-    console.log(response.data.results)
-  })
+})
+  }, [])
 
-  
-
-  
   return (
     <div className="App">
-      {PokemonList.map(pokemon => <div>{pokemon.name}</div>)}
+      <Header/>
     </div>
   );
-}
+};
 
 export default App;
