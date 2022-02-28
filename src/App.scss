@@ -1,5 +1,5 @@
 $background-clr : #ffffff;
-$navbar-height : 100px;
+$navbar-height : 70px;
 $footer-height : 150px;
 
 
@@ -10,6 +10,7 @@ $footer-height : 150px;
 }
 
 body {
+  overflow-x: hidden;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -21,4 +22,9 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-rows: $navbar-height 1fr $footer-height;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
 }

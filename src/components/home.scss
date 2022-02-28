@@ -1,0 +1,83 @@
+.mainimg {
+    position: relative;
+    text-align: center;
+    img {
+        width: 100%;
+    }
+    h1{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        width: 100%;
+        font-size: 6vw;
+        &::after {
+            display: block;
+            content: 'A Pokemon Database';
+            font-size: 50%;
+        }
+    }
+
+}
+#listlabel {
+    margin-top: 3em;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.pokemonlist{
+    margin-top: 5em;
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .card {
+        display: flex;
+        border: none;
+        margin: 2.5em;
+        flex-direction: column;
+        transition: transform ease-out 200ms;
+        align-items: center;
+        border-radius: 80px;
+        background: #ffffff;
+        box-shadow:  30px 30px 60px #cacaca,
+             -30px -30px 60px #ffffff;
+        width: 18%;
+        min-width: 250px;
+        height: auto;
+        &:hover {
+            transform: scale(1.1);
+        }
+        img {
+            border-radius: 80px 80px 0px 0px;
+            width: 100%;
+        }
+        p {
+            display: block;
+            font-size: 1.5em;
+            text-align: center;
+            width: 80%;
+            font-weight: 600;
+            margin: 1em;
+    }
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .mainimg {
+        display: none;
+    }
+    #listlabel {
+        margin-top: 1em;
+    }
+    .pokemonlist {
+        margin-top: 0;
+        .card {
+            margin: 1em;
+            min-width: 180px;
+        }
+    }
+}

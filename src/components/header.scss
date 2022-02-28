@@ -4,14 +4,18 @@ $bg-btn : rgb(240, 240, 240);
 
 @mixin center {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
 
 div.header {
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    left: 0;
     @include center();
     width: 100%;
-    height: 100%;
+    height: 10%;
     background-color: $bg;
     h1 {
         color: invert($bg);
@@ -50,7 +54,7 @@ div.header {
         }
         button {
             height: 100%;
-            transition: all ease-out 400ms;
+            transition: border-radius  ease-out 400ms;
             
             background-color: white;
             border: none;
@@ -68,5 +72,24 @@ div.header {
             }
         }
         
+    }
+}
+
+@media screen and (max-width: 700px) {
+    div.header {
+        h1 {
+            font-size : 2rem;
+        }
+        form {
+            transform: scale(0.9);
+            input {
+                padding: 1.1em;
+                width: 200px;
+            }
+            button {
+                border-radius: 0px $bradius $bradius 0px;
+                background-color: $bg-btn;
+            }
+        }
     }
 }

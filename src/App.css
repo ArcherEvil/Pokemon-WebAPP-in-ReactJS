@@ -6,6 +6,7 @@
 }
 
 body {
+  overflow-x: hidden;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   background-color: #ffffff;
@@ -16,7 +17,12 @@ body {
   min-height: 100vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 100px 1fr 150px;
-      grid-template-rows: 100px 1fr 150px;
+  -ms-grid-rows: 70px 1fr 150px;
+      grid-template-rows: 70px 1fr 150px;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
 }
 /*# sourceMappingURL=App.css.map */
