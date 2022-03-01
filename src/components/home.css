@@ -66,12 +66,22 @@
           box-shadow: 30px 30px 60px #cacaca, -30px -30px 60px #ffffff;
   width: 18%;
   min-width: 250px;
+  cursor: pointer;
   height: auto;
 }
 
 .pokemonlist .card:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.pokemonlist .card:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: -webkit-transform ease-in-out 1ms;
+  transition: -webkit-transform ease-in-out 1ms;
+  transition: transform ease-in-out 1ms;
+  transition: transform ease-in-out 1ms, -webkit-transform ease-in-out 1ms;
 }
 
 .pokemonlist .card img {
@@ -85,7 +95,101 @@
   text-align: center;
   width: 80%;
   font-weight: 600;
+  margin-top: 1em;
+}
+
+.pokemonlist .card .types {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pokemonlist .card .types p {
   margin: 1em;
+  margin-bottom: 2em;
+  font-weight: 500;
+  border-radius: 10%;
+  padding: 0.1em 0.5em 0.1em 0.5em;
+}
+
+.pokemonlist .card .types .poison {
+  background-color: #e7dafc;
+  color: #420e96;
+}
+
+.pokemonlist .card .types .grass {
+  background-color: #ddfcda;
+  color: #19960e;
+}
+
+.pokemonlist .card .types .water {
+  background-color: #e9f2fa;
+  color: #205e91;
+}
+
+.pokemonlist .card .types .bug {
+  background-color: #fbffda;
+  color: #96a700;
+}
+
+.pokemonlist .card .types .fire {
+  background-color: #f6cbc1;
+  color: #752410;
+}
+
+.pokemonlist .card .types .flying {
+  background-color: #ede3f2;
+  color: #5a3370;
+}
+
+.pokemonlist .card .types .normal {
+  background-color: #d9d9d9;
+  color: white;
+}
+
+.pokemonlist .card .types .electric {
+  background-color: #f1e14d;
+  color: #998b0c;
+}
+
+.pokemonlist .card .types .ground {
+  background-color: #ffe25f;
+  color: #2c2400;
+}
+
+.pokemonlist .card .types .fairy {
+  background-color: #f1e5f0;
+  color: #9c5596;
+}
+
+.pokemonlist .card .types .fighting {
+  background-color: #c8d0f3;
+  color: #0f1a47;
+}
+
+.pokemonlist .card .types .psychic {
+  background-color: #e2d6fd;
+  color: #230569;
+}
+
+.pokemonlist .card .types .rock {
+  background-color: #fff888;
+  color: #222000;
+}
+
+.pokemonlist .card .types .steel {
+  background-color: white;
+  color: #5a5a5a;
+}
+
+.pokemonlist .card .types .ghost {
+  background-color: #b3b3b3;
+  color: black;
+}
+
+.pokemonlist .card .types .ice {
+  background-color: #cfe3e6;
+  color: #509099;
 }
 
 @media screen and (max-width: 700px) {

@@ -1,3 +1,26 @@
+$poison : rgb(66, 14, 150);
+$grass : rgb(25, 150, 14);
+$water : rgb(32, 94, 145);
+$fire : rgb(117, 36, 16);
+$bug : rgb(150, 167, 0);
+$flying : rgb(90, 51, 112);
+$normal : rgb(255, 255, 255);
+$electric : rgb(153, 139, 12);
+$ground : rgb(44, 36, 0);
+$fairy : rgb(156, 85, 150);
+$fighting : rgb(15, 26, 71);
+$psychic : rgb(35, 5, 105);
+$rock : rgb(34, 32, 0);
+$steel : rgb(90, 90, 90);
+$ice : rgb(80, 144, 153);
+$ghost : rgb(0, 0, 0);
+
+
+@mixin type($color, $porcentagem) {
+    background-color: lighten($color, $porcentagem);
+    color: $color;
+}
+
 .mainimg {
     position: relative;
     text-align: center;
@@ -46,9 +69,14 @@
              -30px -30px 60px #ffffff;
         width: 18%;
         min-width: 250px;
+        cursor: pointer;
         height: auto;
         &:hover {
             transform: scale(1.1);
+        }
+        &:active {
+            transform: scale(0.9);
+            transition: transform ease-in-out 1ms;
         }
         img {
             border-radius: 80px 80px 0px 0px;
@@ -60,8 +88,73 @@
             text-align: center;
             width: 80%;
             font-weight: 600;
-            margin: 1em;
-    }
+            margin-top: 1em;
+        }
+        .types {
+            display: flex;
+            
+            p {
+                margin: 1em;
+                margin-bottom: 2em;
+                font-weight: 500;
+                border-radius: 10%;
+                padding: 0.1em 0.5em 0.1em 0.5em;
+                
+            }
+            .poison {
+                @include type($poison, 60%)
+            }
+            .grass {
+                @include type($grass, 60%)
+            }
+            .water {
+                @include type($water, 60%)
+            }
+            .bug {
+                @include type($bug, 60%)
+            }
+            .fire {
+                @include type($fire, 60%)
+            }
+            .flying {
+                @include type($flying, 60%)
+            }
+            .normal {
+                background-color: darken($normal, 15%);
+                color: $normal;
+            }
+            .electric {
+                @include type($electric, 30%)
+            }
+
+            .ground {
+                @include type($ground, 60%)
+            }
+
+            .fairy {
+                @include type($fairy, 45%)
+            }
+
+            .fighting {
+                @include type($fighting, 70%)
+            }
+            .psychic {
+                @include type($psychic, 70%)
+            }
+            .rock {
+                @include type($rock, 70%)
+            }
+            .steel {
+                @include type($steel, 70%)
+            }
+
+            .ghost {
+                @include type($ghost, 70%)
+            }
+            .ice {
+                @include type($ice, 40%)
+            }
+        }
     }
 }
 

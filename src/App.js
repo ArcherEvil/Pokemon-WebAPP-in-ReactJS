@@ -1,9 +1,10 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import './App.css';
 import Header from './components/header.js';
 import Home from './components/home';
+import Pokemon from './components/Pokemon/Pokemon';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
     <div className='Main'>
       <Routes>
         <Route path='/' element={<Home list={PokemonList}/>}/>
+        <Route path='/pokemon/:name' element={<Pokemon></Pokemon>}/>
       </Routes>
     </div>
     </div>
