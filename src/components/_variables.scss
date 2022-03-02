@@ -1,0 +1,33 @@
+$poison : rgb(66, 14, 150);
+$grass : rgb(25, 150, 14);
+$water : rgb(32, 94, 145);
+$fire : rgb(117, 36, 16);
+$bug : rgb(150, 167, 0);
+$flying : rgb(90, 51, 112);
+$normal : rgb(255, 255, 255);
+$electric : rgb(153, 139, 12);
+$ground : rgb(44, 36, 0);
+$fairy : rgb(156, 85, 150);
+$fighting : rgb(15, 26, 71);
+$psychic : rgb(35, 5, 105);
+$rock : rgb(34, 32, 0);
+$steel : rgb(90, 90, 90);
+$ice : rgb(80, 144, 153);
+$ghost : rgb(0, 0, 0);
+
+@mixin type($color, $porcentagem) {
+    background-color: lighten($color, $porcentagem);
+    color: $color;
+}
+
+@mixin border($color, $module, $porcentagem) {
+    @if $module == 'darken' {
+        background-color: darken($color, $porcentagem);
+    }
+    @else if $module == 'lighten' {
+        background-color: lighten($color, $porcentagem);
+    }
+    @else {
+        background-color: $color;
+    }
+}

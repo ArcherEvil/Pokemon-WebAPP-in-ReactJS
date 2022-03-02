@@ -23,9 +23,103 @@ main .container {
       -ms-flex-align: center;
           align-items: center;
   width: 70%;
-  height: 800px;
   -webkit-box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
           box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
   border-radius: 10%;
+}
+
+main .container .imgcontainer {
+  padding: 1em;
+  width: 100%;
+  border-radius: 10% 10% 0% 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container .imgcontainer p {
+  font-size: 2em;
+  font-weight: 700;
+  color: black;
+}
+
+main .container .imgcontainer img {
+  width: 20%;
+  border-radius: 50%;
+  background-color: white;
+}
+
+main .container .poison {
+  background-color: #ccb9ea;
+}
+
+main .container .grass {
+  background-color: #ddfcda;
+}
+
+main .container .water {
+  background-color: #e9f2fa;
+}
+
+main .container .bug {
+  background-color: #fbffda;
+}
+
+main .container .fire {
+  background-color: #f6cbc1;
+}
+
+main .container .flying {
+  background-color: #ede3f2;
+}
+
+main .container .normal {
+  background-color: #d9d9d9;
+}
+
+main .container .electric {
+  background-color: #f1e14d;
+}
+
+main .container .ground {
+  background-color: #796300;
+}
+
+main .container .fairy {
+  background-color: #f1e5f0;
+}
+
+main .container .fighting {
+  background-color: #c8d0f3;
+}
+
+main .container .psychic {
+  background-color: #e2d6fd;
+}
+
+main .container .rock {
+  background-color: #fff888;
+}
+
+main .container .steel {
+  background-color: white;
+}
+
+main .container .ghost {
+  background-color: #b3b3b3;
+}
+
+main .container .ice {
+  background-color: #cfe3e6;
 }
 /*# sourceMappingURL=Pokemon.css.map */

@@ -1,3 +1,5 @@
+@import '../variables';
+
 main {
     margin-top: 3em;
     display: flex;
@@ -8,9 +10,80 @@ main {
         flex-direction: column;
         align-items: center;
         width: 70%;
-        height: 800px;
         box-shadow:  20px 20px 60px #bebebe,
         -20px -20px 60px #ffffff;
         border-radius: 10%;
+        .imgcontainer {
+            padding: 1em;
+            width: 100%;
+            border-radius: 10% 10% 0% 0%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            p {
+                font-size: 2em;
+                font-weight: 700;
+                color: rgb(0, 0, 0);
+            }
+            img {
+                width: 20%;
+                border-radius: 50%;
+                background-color: white;
+
+            }
+        }
+            .poison {
+                @include border(desaturate($poison, 30%), 'lighten', 50%)
+            }
+            .grass {
+                @include border($grass, 'lighten', 60%)
+            }
+            .water {
+                @include border($water, 'lighten', 60%)
+            }
+            .bug {
+                @include border($bug, 'lighten', 60%)
+            }
+            .fire {
+                @include border($fire, 'lighten', 60%)
+            }
+            .flying {
+                @include border($flying, 'lighten', 60%)
+            }
+            .normal {
+                @include border($normal, 'darken' , 15%);
+            }
+            .electric {
+                @include border($electric, 'lighten', 30%)
+            }
+            
+            .ground {
+                @include border($ground, 'lighten', 15%)
+            }
+            
+            .fairy {
+                @include border($fairy, 'lighten', 45%)
+            }
+            
+            .fighting {
+                @include border($fighting, 'lighten', 70%)
+            }
+            .psychic {
+                @include border($psychic, 'lighten', 70%)
+            }
+            .rock {
+                @include border($rock, 'lighten', 70%)
+            }
+            .steel {
+                @include border($steel, 'lighten', 70%)
+            }
+            
+            .ghost {
+                @include border($ghost, 'lighten', 70%)
+            }
+            .ice {
+                @include border($ice, 'lighten', 40%)
+            }
+        }
     }
-}
