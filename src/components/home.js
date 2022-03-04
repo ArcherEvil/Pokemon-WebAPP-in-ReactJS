@@ -30,7 +30,6 @@ const Home = ({list}) => {
 }
 
 const Card = ({name, url}) => {
-  const base = window.location.origin;
   const navigate = useNavigate();
 
   const Link = (names) => {

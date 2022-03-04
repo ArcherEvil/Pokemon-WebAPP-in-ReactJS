@@ -1,6 +1,7 @@
 @import '../variables';
 
 main {
+    transform: scale(0.7);
     margin-top: 3em;
     display: flex;
     justify-content: center;
@@ -9,29 +10,19 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         width: 70%;
         box-shadow:  20px 20px 60px #bebebe,
         -20px -20px 60px #ffffff;
         border-radius: 10%;
-        .imgcontainer {
-            padding: 1em;
-            width: 100%;
-            border-radius: 10% 10% 0% 0%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            p {
-                font-size: 2em;
-                font-weight: 700;
-                color: rgb(0, 0, 0);
-            }
-            img {
-                width: 20%;
-                border-radius: 50%;
-                background-color: white;
 
-            }
+        img {
+            width: 20%;
+            border-radius: 50%;
+            margin-top: 20px;
+            padding: 0.5em;
+            background-color: white;
+
         }
             .poison {
                 @include border(desaturate($poison, 30%), 'lighten', 50%)
@@ -56,16 +47,13 @@ main {
             }
             .electric {
                 @include border($electric, 'lighten', 30%)
-            }
-            
+            }         
             .ground {
                 @include border($ground, 'lighten', 15%)
-            }
-            
+            }    
             .fairy {
                 @include border($fairy, 'lighten', 45%)
             }
-            
             .fighting {
                 @include border($fighting, 'lighten', 70%)
             }
@@ -77,13 +65,136 @@ main {
             }
             .steel {
                 @include border($steel, 'lighten', 70%)
-            }
-            
+            }    
             .ghost {
                 @include border($ghost, 'lighten', 70%)
             }
             .ice {
                 @include border($ice, 'lighten', 40%)
+            }
+            p {
+                font-size: 3em;
+                font-weight: 600;
+            }
+
+            .types {
+                display: flex;
+                h3 {
+                    margin-left: 1em;
+                    margin-right: 1em;
+                    font-size: 1.5em;
+                    border-radius: 10%;
+                    padding: 0.1em 0.5em 0.1em 0.5em;
+                }
+                .poison {
+                    @include type($poison, 60%)
+                }
+                .grass {
+                    @include type($grass, 60%)
+                }
+                .water {
+                    @include type($water, 60%)
+                }
+                .bug {
+                    @include type($bug, 60%)
+                }
+                .fire {
+                    @include type($fire, 60%)
+                }
+                .flying {
+                    @include type($flying, 60%)
+                }
+                .normal {
+                    background-color: darken($normal, 15%);
+                    color: $normal;
+                }
+                .electric {
+                    @include type($electric, 30%)
+                }
+    
+                .ground {
+                    @include type($ground, 60%)
+                }
+    
+                .fairy {
+                    @include type($fairy, 45%)
+                }
+    
+                .fighting {
+                    @include type($fighting, 70%)
+                }
+                .psychic {
+                    @include type($psychic, 70%)
+                }
+                .rock {
+                    @include type($rock, 70%)
+                }
+                .steel {
+                    @include type($steel, 70%)
+                }
+    
+                .ghost {
+                    @include type($ghost, 70%)
+                }
+                .ice {
+                    @include type($ice, 40%)
+                }
+            }
+            .abilities {
+                display: flex;
+                h2 {
+                    margin: 0.5em;
+                    font-size: 1.5em;
+                    font-weight: 500;
+                }
+                .\(hidden\) {
+                    text-decoration: underline;
+                    color: rgb(66, 66, 66);
+                }
+            }
+
+            .statsgrid {
+                width: 100%;
+                display: grid;
+                place-items: center;
+                grid-template-columns: 1fr 1fr;
+                details {
+                    height: 100%;
+                    color: gray;
+                    padding: 1em;
+                    display: grid;
+                    font-weight: 600;
+                    font-size: 1.1em;
+                    summary {
+                        font-weight: 600;
+                        font-size: 1.3em;
+                        color: gray;
+                    }
+                }
+                .information {
+                    h5 {
+                        margin-top: 1em;
+                        font-weight: 600;
+                        margin-bottom: 1.3em;
+                        font-size: 1.5em;
+                    }
+                }
+            }
+            .Sprites {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                p {
+                font-weight: 700;
+                font-size: 2em;
+                }
+                div {
+                    width: 100%;
+                    justify-content: center;
+                    display: flex;
+                }
             }
         }
     }

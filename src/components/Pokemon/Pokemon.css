@@ -1,4 +1,6 @@
 main {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
   margin-top: 3em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,40 +24,20 @@ main .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 70%;
   -webkit-box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
           box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
   border-radius: 10%;
 }
 
-main .container .imgcontainer {
-  padding: 1em;
-  width: 100%;
-  border-radius: 10% 10% 0% 0%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-main .container .imgcontainer p {
-  font-size: 2em;
-  font-weight: 700;
-  color: black;
-}
-
-main .container .imgcontainer img {
+main .container img {
   width: 20%;
   border-radius: 50%;
+  margin-top: 20px;
+  padding: 0.5em;
   background-color: white;
 }
 
@@ -121,5 +103,185 @@ main .container .ghost {
 
 main .container .ice {
   background-color: #cfe3e6;
+}
+
+main .container p {
+  font-size: 3em;
+  font-weight: 600;
+}
+
+main .container .types {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .container .types h3 {
+  margin-left: 1em;
+  margin-right: 1em;
+  font-size: 1.5em;
+  border-radius: 10%;
+  padding: 0.1em 0.5em 0.1em 0.5em;
+}
+
+main .container .types .poison {
+  background-color: #e7dafc;
+  color: #420e96;
+}
+
+main .container .types .grass {
+  background-color: #ddfcda;
+  color: #19960e;
+}
+
+main .container .types .water {
+  background-color: #e9f2fa;
+  color: #205e91;
+}
+
+main .container .types .bug {
+  background-color: #fbffda;
+  color: #96a700;
+}
+
+main .container .types .fire {
+  background-color: #f6cbc1;
+  color: #752410;
+}
+
+main .container .types .flying {
+  background-color: #ede3f2;
+  color: #5a3370;
+}
+
+main .container .types .normal {
+  background-color: #d9d9d9;
+  color: white;
+}
+
+main .container .types .electric {
+  background-color: #f1e14d;
+  color: #998b0c;
+}
+
+main .container .types .ground {
+  background-color: #ffe25f;
+  color: #2c2400;
+}
+
+main .container .types .fairy {
+  background-color: #f1e5f0;
+  color: #9c5596;
+}
+
+main .container .types .fighting {
+  background-color: #c8d0f3;
+  color: #0f1a47;
+}
+
+main .container .types .psychic {
+  background-color: #e2d6fd;
+  color: #230569;
+}
+
+main .container .types .rock {
+  background-color: #fff888;
+  color: #222000;
+}
+
+main .container .types .steel {
+  background-color: white;
+  color: #5a5a5a;
+}
+
+main .container .types .ghost {
+  background-color: #b3b3b3;
+  color: black;
+}
+
+main .container .types .ice {
+  background-color: #cfe3e6;
+  color: #509099;
+}
+
+main .container .abilities {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .container .abilities h2 {
+  margin: 0.5em;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+main .container .abilities .\(hidden\) {
+  text-decoration: underline;
+  color: #424242;
+}
+
+main .container .statsgrid {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+main .container .statsgrid details {
+  height: 100%;
+  color: gray;
+  padding: 1em;
+  display: -ms-grid;
+  display: grid;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+main .container .statsgrid details summary {
+  font-weight: 600;
+  font-size: 1.3em;
+  color: gray;
+}
+
+main .container .statsgrid .information h5 {
+  margin-top: 1em;
+  font-weight: 600;
+  margin-bottom: 1.3em;
+  font-size: 1.5em;
+}
+
+main .container .Sprites {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .container .Sprites p {
+  font-weight: 700;
+  font-size: 2em;
+}
+
+main .container .Sprites div {
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=Pokemon.css.map */
