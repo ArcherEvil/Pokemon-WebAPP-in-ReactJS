@@ -9,14 +9,20 @@ import Search from './components/search';
 
 
 function App() {
+  let random = Math.floor(Math.random() * 901);
 
   const [PokemonList, setPokemonList] = useState([])
+  const [LimitedPokemonList, setLimitedPokemonList] = useState([])
 
   useEffect(() => {
     const url = 'https://pokeapi.co/api/v2/pokemon?limit=1126';
+    const url2 = 'https://pokeapi.co/api/v2/pokemon?limit=50&offset=' + random.toString();
     axios.get(url).then((response) => {
     setPokemonList(response.data.results)
 })
+  axios.get(url2).then((response) => {
+  setLimitedPokemonList(response.data.results)
+  })
   }, [])
 
   return (
@@ -28,7 +34,7 @@ function App() {
       </div>
     <div className='Main'>
       <Routes>
-        <Route path='/' element={<Home list={PokemonList}/>}/>
+        <Route path='/' element={<Home list={LimitedPokemonList}/>}/>
         <Route path='/pokemon/:name' element={<Pokemon></Pokemon>}/>
         <Route path='/search/:name' element={<Search list={PokemonList}/>}/>
       </Routes>

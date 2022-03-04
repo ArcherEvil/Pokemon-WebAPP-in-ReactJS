@@ -31,7 +31,7 @@ const Card = ({name, url}) => {
     const navigate = useNavigate();
   
     const Link = (names) => {
-      console.log(base + 'pokemon/' + names)
+      navigate('/pokemon/' + names)
       
     }
     const [types, setTypes] = useState([])
